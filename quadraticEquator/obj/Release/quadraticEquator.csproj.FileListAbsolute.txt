@@ -1,0 +1,8 @@
+C:\Users\BONMAS\source\repos\quadraticEquator\quadraticEquator\bin\Release\quadraticEquator.exe.config
+C:\Users\BONMAS\source\repos\quadraticEquator\quadraticEquator\bin\Release\quadraticEquator.exe
+C:\Users\BONMAS\source\repos\quadraticEquator\quadraticEquator\bin\Release\quadraticEquator.pdb
+C:\Users\BONMAS\source\repos\quadraticEquator\quadraticEquator\obj\Release\quadraticEquator.MainForm.resources
+C:\Users\BONMAS\source\repos\quadraticEquator\quadraticEquator\obj\Release\quadraticEquator.Properties.Resources.resources
+C:\Users\BONMAS\source\repos\quadraticEquator\quadraticEquator\obj\Release\quadraticEquator.csproj.GenerateResource.cache
+C:\Users\BONMAS\source\repos\quadraticEquator\quadraticEquator\obj\Release\quadraticEquator.exe
+C:\Users\BONMAS\source\repos\quadraticEquator\quadraticEquator\obj\Release\quadraticEquator.pdb
