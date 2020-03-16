@@ -1,4 +1,4 @@
-# Equation-Calculator
+# Quadratic-Equation-Calculator
 Калькулятор уравнений - один из моих первых проектов.
 
 <h4> Что есть в этом калькуляторе </h4>
