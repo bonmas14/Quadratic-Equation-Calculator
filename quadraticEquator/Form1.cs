@@ -40,19 +40,23 @@ namespace quadraticEquator
         private void nAvar_ValueChanged(object sender, EventArgs e)
         {
             AinputVar = this.nAvar.Value;
+            DynamicUpdate();
         }
 
         private void nBvar_ValueChanged(object sender, EventArgs e)
         {
             BinputVar = this.nBvar.Value;
+            DynamicUpdate();
         }
 
         private void nCvar_ValueChanged(object sender, EventArgs e)
         {
             СinputVar = this.nCvar.Value;
+            DynamicUpdate();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void DynamicUpdate()
         {
             if (AinputVar == 0)
             {
@@ -81,26 +85,53 @@ namespace quadraticEquator
                     DiscrState = 2;
                     WeightDiscr += "D < 0 \n";
                 }
-                this.lOutput.Text = "Дискриминант = " + Discriminant + WeightDiscr;
-                switch(DiscrState)
+
+                string UpStr;
+                string DownStr;
+
+                this.lOutput.Text = "";
+
+                if (DiscrState == 2)
+                {
+                    this.lOutput.Text += $" \nD = {Math.Pow(BinEqua, 2)} - 4 * {AinEqua} * {CinEqua} = {Discriminant}\n \n";
+                }
+                else
+                {
+                    this.lOutput.Text += $"\nD = {Math.Pow(BinEqua, 2)} - 4 * {AinEqua} * {CinEqua} = {Discriminant}  =  {Math.Round(Math.Sqrt(Discriminant), 2)}\n \n";
+                }
+                this.lOutput.Text += "Дискриминант = " + Discriminant + WeightDiscr;
+                switch (DiscrState)
                 {
                     case 0:
                         double outputVarx = (-BinEqua + Math.Sqrt(Discriminant)) / (2 * AinEqua);
-                        this.lOutput.Text += "\n" + $"{-BinEqua}" + " + " + $"{Math.Round(Math.Sqrt(Discriminant), 2)} \n";
-                        this.lOutput.Text += $"------------ = {Math.Round(outputVarx, 2)} (x1)\n";
-                        this.lOutput.Text += $"2 * {AinEqua}";
+
+                        UpStr =  $"{-BinEqua}" + " + " + $"{Math.Round(Math.Sqrt(Discriminant), 2)}";
+                        DownStr = $"2 * {AinEqua}";
+
+                        this.lOutput.Text += "\n" + UpStr + "\n";
+                        this.lOutput.Text += $"{LineRender(UpStr, DownStr)} = {Math.Round(outputVarx, 2)} (x1)\n";
+                        this.lOutput.Text += DownStr;
 
 
                         outputVarx = (-BinEqua - Math.Sqrt(Discriminant)) / (2 * AinEqua);
-                        this.lOutput.Text += "\n \n" + $"{-BinEqua}" + " - " + $"{Math.Round(Math.Sqrt(Discriminant),2)}\n";
-                        this.lOutput.Text += $"----------- = {Math.Round(outputVarx, 2)} (x2)\n";
-                        this.lOutput.Text += $"2 * {AinEqua}";
+
+                        UpStr = $"{-BinEqua}" + " - " + $"{Math.Round(Math.Sqrt(Discriminant), 2)}";
+                        DownStr = $"2 * {AinEqua}";
+
+                        this.lOutput.Text += "\n \n" + UpStr + "\n";
+                        this.lOutput.Text += $"{LineRender(UpStr,DownStr)} = {Math.Round(outputVarx, 2)} (x2)\n";
+                        this.lOutput.Text += DownStr;
+
                         break;
                     case 1:
                         outputVarx = -BinEqua / (2 * AinEqua);
-                        this.lOutput.Text += "\n" + $"{-BinEqua}\n";
-                        this.lOutput.Text += $"------------ = {Math.Round(outputVarx, 2)} (x)\n";
-                        this.lOutput.Text += $"2 * {AinEqua}";
+
+                        UpStr = $"{-BinEqua}";
+                        DownStr = $"2 * {AinEqua}";
+
+                        this.lOutput.Text += "\n" + UpStr + "\n";
+                        this.lOutput.Text += $"{LineRender(UpStr, DownStr)} = {Math.Round(outputVarx, 2)} (x)\n";
+                        this.lOutput.Text += DownStr;
                         break;
                     case 2:
                         this.lOutput.Text += "\nНет Корней";
@@ -108,6 +139,71 @@ namespace quadraticEquator
                 }
             }
         }
+
+        private string LineRender(string UpString, string DownString)
+        {
+            string LineOutput = "";
+            int MaxLenght = 0;
+
+            if (UpString.Length >= DownString.Length)
+            {
+                MaxLenght += UpString.Length + 5;
+            }
+            else
+            {
+                MaxLenght += DownString.Length + 5;
+            }
+
+            for (int linelenght = 0; linelenght <= MaxLenght; linelenght++)
+            {
+                LineOutput += "-";
+            }
+            return LineOutput;
+        }
+
+
+        /*
+        private void RoodsOutput(byte typeEq, double AValue, double BValue = 0,
+                                double CValue = 0, double outputX1 = 0, double outputX2 = 0)
+        {
+            switch (typeEq)
+            {
+                // if 2 roods
+                case 0:
+                    {
+
+                    }
+                    break;
+                // if 1 rood
+                case 1:
+                    {
+
+                    }
+                    break;
+                // if no roods
+                case 2:
+                    {
+
+                    }
+                    break;
+                //
+                case 3:
+                    {
+
+                    }
+                    break;
+                //
+                case 4:
+                    {
+
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+        }*/
+
 
         private void button2_Click(object sender, EventArgs e)
         {
