@@ -45,7 +45,6 @@
             this.nMinVar = new System.Windows.Forms.NumericUpDown();
             this.nMaxVar = new System.Windows.Forms.NumericUpDown();
             this.lOutput = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.lUserError = new System.Windows.Forms.Label();
@@ -108,7 +107,6 @@
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.splitContainer2.Panel2.Controls.Add(this.lOutput);
-            this.splitContainer2.Panel2.Controls.Add(this.button1);
             this.splitContainer2.Panel2.Controls.Add(this.label1);
             this.splitContainer2.Size = new System.Drawing.Size(302, 362);
             this.splitContainer2.SplitterDistance = 150;
@@ -306,20 +304,10 @@
             // lOutput
             // 
             this.lOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lOutput.Location = new System.Drawing.Point(53, 0);
+            this.lOutput.Location = new System.Drawing.Point(2, 0);
             this.lOutput.Name = "lOutput";
-            this.lOutput.Size = new System.Drawing.Size(200, 165);
+            this.lOutput.Size = new System.Drawing.Size(298, 194);
             this.lOutput.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(53, 168);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Расчитать";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -417,7 +405,6 @@
         private System.Windows.Forms.Label FormInterface7;
         private System.Windows.Forms.Label lUserError;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lOutput;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
