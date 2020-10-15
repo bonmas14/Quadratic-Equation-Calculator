@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//Copyright (c) 2020 BonMAS14
 namespace quadraticEquator
 {
     public partial class MainForm : Form
