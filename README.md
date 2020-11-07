@@ -1,6 +1,8 @@
 # Quadratic-Equation-Calculator
 Калькулятор уравнений - один из моих первых проектов.
 
+New version avalable at https://github.com/bonmas14/QuadraticEquationCalc
+
 Есть Android версия От 4.4 armv7
 
 <h4> Что есть в этом калькуляторе </h4>
